@@ -159,6 +159,14 @@ function lib.GetRealmID(realmName)
 end
 
 ---------------------------------------------------------------------
+-- GetRealmName
+---------------------------------------------------------------------
+function lib.GetRealmName(realmID)
+    if Unpack then Unpack() end
+    return realmID and realmData[realmID] and realmData[realmID]["name"]
+end
+
+---------------------------------------------------------------------
 -- realm data
 ---------------------------------------------------------------------
 realmData = {
