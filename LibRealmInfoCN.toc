@@ -1,5 +1,5 @@
-## Interface: 110002
-## Version: 2024/09/19
+## Interface: 11507,30404,110105,110107
+## Version: 2025/05/12
 ## Title: Lib: RealmInfo(CN)
 ## Author: enderneko
 
