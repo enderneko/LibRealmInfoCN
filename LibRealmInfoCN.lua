@@ -169,6 +169,25 @@ function lib.GetConnectedRealmName(realmNameOrID, unpackResult, currentRealmFirs
 end
 
 ---------------------------------------------------------------------
+-- HasConnectedRealm
+---------------------------------------------------------------------
+function lib.HasConnectedRealm(realmNameOrID)
+    if Unpack then Unpack() end
+
+    realmNameOrID = realmNameOrID or currentRealmID
+
+    if realmNameOrID and type(realmNameOrID) == "string" then
+        realmNameOrID = realmNameToID[realmNameOrID]
+    end
+
+    if realmNameOrID and realmData[realmNameOrID] and realmData[realmNameOrID]["connected"] then
+        return true
+    else
+        return false
+    end
+end
+
+---------------------------------------------------------------------
 -- GetRealmID
 ---------------------------------------------------------------------
 function lib.GetRealmID(realmName)
